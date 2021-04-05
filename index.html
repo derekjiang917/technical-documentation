@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+        * {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            position: fixed;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 60px;
+            top: 0;
+            box-sizing: border-box;
+            padding: 0px 20px;
+            background-color: steelblue;
+            width: 100%;
+            left: 0;
+            color: seashell;
+        }
+        body {
+            background-color: seashell;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color:seashell;
+        }
+        nav > ul {
+            width: 35vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-wrap: wrap;
+                margin-bottom: 5px;
+            }
+            li {
+                margin: 0px 20px 0px 20px;
+            }
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+    </style>
+    <head>
+        <title>Technical Documentation</title>
+    </head>
+    <body>
+        <nav id="navbar">
+
+            <ul>
+                <li>
+                    <a class="nav-link" href="#video">top</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#features">features</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#form">form</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+
+        </main>
+    </body>
+</html>
