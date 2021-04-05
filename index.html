@@ -8,7 +8,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            --navsize: 200px;
+            --navsize: 250px;
+        }
+        @media (max-width: 600px) {
+            * {
+                --navsize: 0px;
+            }
         }
         #navbar header {
             padding: 10px 0px 10px 20px;
@@ -17,7 +22,7 @@
         #navbar footer {
             position: absolute;
             bottom: 10px;
-            padding-left: 20px;
+            padding-left: 40px;
         }
         #navbar {
             position: fixed;
@@ -38,15 +43,21 @@
             display: block;
             padding: 10px 30px;
         }
+        @media (max-width: 600px) {
+            #navbar {
+                    top: -1000px;
+                }
+        }
         body {
             background-color: seashell;
         }
         #main-doc {
-            padding-left: var(--navsize);
+            padding-left: calc(var(--navsize) + 30px);
+            padding-right: 30px;
         }
         .main-section {
-            color: rgb(55, 55, 55);
-            max-width: 1500px;
+            color: rgb(75, 75, 75);
+            max-width: 1200px;
             width: 100%;
             margin: auto;
             display: flex;
@@ -54,10 +65,28 @@
             align-items: left;
             flex-direction: column;
             margin-top: 50px;
+            padding-bottom: 30px;
+            line-height: 1.6;
         }
         .main-section header {
+            color: rgb(55, 55, 55);
             font-size: 30px;
             padding-bottom: 20px;
+        }
+        .main-section p {
+            padding-left: 30px;
+            padding-bottom: 10px;
+            text-align: justify;
+        }
+        .main-section ul {
+            padding-left: 70px;
+            padding-bottom: 10px;
+        }
+        .main-section li {
+            padding-bottom: 5px;
+        }
+        #title {
+            font-size: 40px;
         }
         a {
             text-decoration: none;
@@ -68,15 +97,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-        }
-        @media (max-width: 600px) {
-            header {
-                flex-wrap: wrap;
-                margin-bottom: 5px;
-            }
-            li {
-                margin: 0px 20px 0px 20px;
-            }
         }
     </style>
     <head>
@@ -89,10 +109,10 @@
             </header>
             <ul>
                 <li>
-                    <a class="nav-link" href="#intro">intro</a>
+                    <a class="nav-link" href="#welcome">welcome</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#features">features</a>
+                    <a class="nav-link" href="#what_you_should_know">what you should know</a>
                 </li>
                 <li>
                     <a class="nav-link" href="#form">form</a>
@@ -110,17 +130,35 @@
         </nav>
         
         <main id="main-doc">
-            <section id="intro" class="main-section">
-                <header>WELCOME</header>
+            <section id="welcome" class="main-section">
+                <header id="title">WELCOME</header>
                 <p>
-                    Are you good at python? Are you bad at python? Doesn't matter, I'm making this to get a web developer certification so enjoy.
+                    Are you good at python? Are you bad at python? Doesn't matter, I'm making this to get a web developer certification so enjoy. 
+                    Here are some reasons that python is a cool language:
+                </p>
+                <ul>
+                    <li>easy to learn</li>
+                    <li>free!</li>
+                    <li>often used in machine learning</li>
+                    <li>lots of convenient APIs to import and use</li>
+                    <li>abundance of resources to look up in case you get lost (like this one)</li>
+                </ul>
+                <p>
+                    So what are you waiting for? Install your favourite locally sourced free-range python compiler and get started!
+                </p>
+            </section>
+            <section id="what_you_should_know" class="main-section">
+                <header>WHAT YOU SHOULD KNOW</header>
+                <p>
+                    I'm gonna assume you understand English and have a high-school level understanding of most concepts. 
+                    You do not need to know coding to use this guide. 
+                    I'm going to assume you already have a python environment set up, as that is specific to the kind of computer you have, 
+                    and I'm too lazy to make a guide for each. 
+                    If you know another programming language, then you can feel free to skip some parts of this guide.
                 </p>
             </section>
             <section id="" class="main-section">
-
-            </section>
-            <section id="" class="main-section">
-
+                
             </section>
             <section id="" class="main-section">
 
